@@ -41,7 +41,9 @@ public class RobotContainer {
   private void configureBindings() {
     // Schedule `exampleMethodCommand` when the Gamepad's right face button is pressed,
     // cancelling on release.
-    joystick.a().onTrue(Commands.runOnce(() -> exampleSubsystem.setGoal(ExampleState.DOS)));
+    joystick.a().onTrue(Commands.runOnce(() -> exampleSubsystem.setGoal(ExampleState.UNO)));
+    joystick.leftTrigger().onTrue(Commands.runOnce(() -> exampleSubsystem.setGoal(ExampleState.DOS)));
+    joystick.rightTrigger().onTrue(Commands.runOnce(() -> exampleSubsystem.setGoal(ExampleState.TRES)));
   }
 
   /**
